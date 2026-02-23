@@ -131,3 +131,11 @@ select {
   display: none;
   pointer-events: none;
 }
+
+.site-description {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
