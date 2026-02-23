@@ -1,0 +1,112 @@
+/* ===== ベース設定 ===== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: #111111;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== タイトル（①） ===== */
+.app-title {
+  flex: 0.8;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: #000;
+  border-bottom: 3px solid #ff6a00;
+}
+
+/* ===== 入力エリア（②） ===== */
+.panel-top {
+  flex: 1.5;
+  padding: 10px 15px;
+  background: #1a1a1a;
+  border-bottom: 3px solid #ff6a00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel-top input,
+.panel-top select,
+.panel-top button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+}
+
+.panel-top button {
+  background: #ff6a00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== 結果エリア（③） ===== */
+.results {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4444;
+  background: #000;
+  border-bottom: 3px solid #ff6a00;
+}
+
+/* ===== 地図エリア（④） ===== */
+.panel-map {
+  flex: 3;
+  margin-top: 20px;
+}
+
+#map {
+  width: 100%;
+}
+
+/* =========================
+   📱 スマホ
+========================= */
+@media (max-width: 768px) {
+
+  #map {
+    aspect-ratio: 1 / 1;  /* ← 正方形 */
+  }
+
+}
+
+/* =========================
+   💻 PC
+========================= */
+@media (min-width: 769px) {
+
+  #map {
+    height: 700px;   /* PCは横長 */
+  }
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-icon {
+  width: 80px;
+  height: auto;
+}
