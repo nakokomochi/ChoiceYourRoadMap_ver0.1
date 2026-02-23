@@ -24,40 +24,42 @@
        <h1>どこいこMap</h1>
       </div>
 
+      <p class="site-description"> 
+        ドライブ・ツーリングスポットを提案するサイトです。
+        <br> 
+        出発地を入力し、片道の移動時間、高速道路の利用有無（※30分は高速なし）を選んでください。
+        <br> オレンジ色の「どこいこうかな！」ボタンを押すと、ランダムで大まかな目的地をご提案します。 </p>
+
     <section class="panel-top">
-      <div class="inputs">
+      <div class="form-container">
+  <label for="startLocation">出発地</label>
+  <input type="text" id="startLocation" placeholder="例：東京駅">
 
-     <label>出発地の住所を入力してね：</label><br>
-     <input id="startLocation" type="text" placeholder="例：東京都渋谷区" style="width: 300px;">
-     <br>
+  <label for="timeSelect">移動時間</label>
+  <select id="timeSelect">
+    <option value="30">30分</option>
+    <option value="60">1時間</option>
+    <option value="90">1時間30分</option>
+    <option value="120">2時間</option>
+    <option value="150">2時間30分</option>
+    <option value="180">3時間</option>
+  </select>
 
-     <label>移動時間を選択:</label>
-     <select id="timeSelect" style="width: 300px;">
-        <option value="30">30分</option>
-        <option value="60">1時間</option>
-        <option value="120">2時間</option>
-        <option value="180">3時間</option>
-     </select>
-     <br>
+  <label for="highway">高速道路</label>
+  <select id="highway">
+    <option value="yes">使う</option>
+    <option value="no">使わない</option>
+  </select>
 
-     <label>高速道路の利用:</label>
-     <select id="highway" style="width: 300px;">
-        <option value="yes">使う</option>
-        <option value="no">使わない</option>
-     </select>
-     <br>
+  <button onclick="searchSpot()">👇 タップで目的地を提案！</button>
+</div>
 
-     <button onclick="searchSpot()">どこいこうかな！</button>
-     <br>
-
-     <div class="results">
-       <div id="result"></div>
-     </div>
 
     </section>   
 
     <section class="panel-map">
       <div id="map"></div>
+      <div id="touch-guide">地図の操作は2本指で行ってください</div>
     </section>    
 
     <!-- ▼ OSM版のJS -->
